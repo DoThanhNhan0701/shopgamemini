@@ -6,20 +6,10 @@
                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amen consenter.</h3>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <img class="card-images-service" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbu5sKBQYRXWQFySXBfZxoIqIvNBkRy59jmblkOTWbHwQ75LtxJrS3Z5bsrveuZSRG8C0&usqp=CAU" alt="Thumbnail">
-                    <h4 class="my-3 text-danger">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="card-images-service" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSarRU4JGbTqzj3SuE9jvsSQLOXmp7lsfe1SwxE4n6joeS8HvH_MS-_2_AUyT4MaSjoyoU&usqp=CAU" alt="Thumbnail">
-                    <h4 class="my-3 text-danger">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="card-images-service" src="https://i.ytimg.com/vi/xxl0MRdEZHU/maxresdefault.jpg" alt="Thumbnail">
-                    <h4 class="my-3 text-danger">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <div v-for="service in services" :key="service.id" class="col-md-4">
+                    <img class="card-images-service" :src="service.image" alt="Thumbnail">
+                    <h4 class="my-3 text-danger">{{ service.name }}</h4>
+                    <p class="text-muted">{{ service.description }}</p>
                 </div>
             </div>
         </div>
@@ -28,7 +18,31 @@
 
 <script>
 export default {
-    name: 'TheServices'
+    name: 'TheServices',
+    data(){
+        return{
+            services: [
+                {
+                    id: 1,
+                    name: 'E-Commerce1',
+                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbu5sKBQYRXWQFySXBfZxoIqIvNBkRy59jmblkOTWbHwQ75LtxJrS3Z5bsrveuZSRG8C0&usqp=CAU',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit1.'
+                },
+                {
+                    id: 2,
+                    name: 'E-Commerce2',
+                    image: 'https://i.ytimg.com/vi/xxl0MRdEZHU/maxresdefault.jpg',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit2.'
+                },
+                {
+                    id: 3,
+                    name: 'E-Commerce3',
+                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSarRU4JGbTqzj3SuE9jvsSQLOXmp7lsfe1SwxE4n6joeS8HvH_MS-_2_AUyT4MaSjoyoU&usqp=CAU',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit3.'
+                },
+            ]
+        }
+    }
 }
 </script>
 

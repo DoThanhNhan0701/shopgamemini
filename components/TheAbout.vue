@@ -53,6 +53,7 @@ export default {
     height: 100%;
 }
 
+/*
 .timeline-image::before {
     height: 400px;
     width: 5px;
@@ -64,7 +65,7 @@ export default {
     left: 50%;
     z-index: 1;
 }
-
+*/
 .timeline-image img {
     z-index: 2;
     position: relative;
@@ -74,12 +75,14 @@ export default {
 
 /* Timeline panel */
 
+/*
 .timeline-panel {
     float: left;
     text-align: right;
     padding: 0 20px 20px 100px;
     position: absolute;
-}
+} 
+*/
 
 .timeline-heading {
     margin-top: 0;

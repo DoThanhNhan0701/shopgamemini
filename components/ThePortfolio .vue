@@ -6,7 +6,7 @@
                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amen consenter.</h3>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
+                <div v-for="portfolio in portfolios" :key="portfolio.id" class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
                         <a class="portfolio-link" href="#">
                             <div class="portfolio-hover">
@@ -16,95 +16,13 @@
                                     data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
                                 </div>
                               </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/5.jpg" alt="Thumbnail card" class="img-fluid">
+                            <img :src="portfolio.image" alt="Thumbnail card" class="img-fluid">
                         </a>
                         <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                             <div class="portfolio-caption-heading text-muted">{{ portfolio.name }}</div>
+                             <div class="portfolio-caption-subheading text-muted">{{ portfolio.description }}</div>
                         </div>
                     </div> 
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <svg class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
-                                </div>
-                            </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/2.jpg" alt="Thumbnail card" class="img-fluid">
-                        </a>
-                        <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <svg class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
-                                </div>
-                            </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/1.jpg" alt="Thumbnail card" class="img-fluid">
-                        </a>
-                        <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <svg 
-                                    class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" 
-                                    data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
-                                </div>
-                              </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/5.jpg" alt="Thumbnail card" class="img-fluid">
-                        </a>
-                        <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <svg class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
-                                </div>
-                            </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/2.jpg" alt="Thumbnail card" class="img-fluid">
-                        </a>
-                        <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <svg class="svg-inline--fa fa-plus fa-3x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg>
-                                </div>
-                            </div>
-                            <img src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/1.jpg" alt="Thumbnail card" class="img-fluid">
-                        </a>
-                        <div class="portfolio-caption">
-                             <div class="portfolio-caption-heading text-muted">Threads</div>
-                             <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -113,7 +31,49 @@
 
 <script>
     export default {
-        name: 'ThePortfolio'
+        name: 'ThePortfolio',
+        data(){
+            return{
+                portfolios: [
+                    {
+                        id: 1,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/4.jpg',
+                        name: 'Threads1',
+                        description: 'Illustration1',
+                    },
+                    {
+                        id: 2,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/6.jpg',
+                        name: 'Threads2',
+                        description: 'Illustration2',
+                    },
+                    {
+                        id: 3,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/3.jpg',
+                        name: 'Threads3',
+                        description: 'Illustration3',
+                    },
+                    {
+                        id: 4,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/5.jpg',
+                        name: 'Threads4',
+                        description: 'Illustration4',
+                    },
+                    {
+                        id: 5,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/1.jpg',
+                        name: 'Threads5',
+                        description: 'Illustration5',
+                    },
+                    {
+                        id: 6,
+                        image: 'https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/2.jpg',
+                        name: 'Threads6',
+                        description: 'Illustration6',
+                    },
+                ]
+            }
+        }
     }
 </script>
 
