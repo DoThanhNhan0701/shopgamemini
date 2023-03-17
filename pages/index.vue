@@ -6,13 +6,14 @@
         <the-about />
         <the-team />
         <the-clients />
-        <div>Đây là trang Home</div>
+        <the-contact />
     </div>
 </template>
 
 <script>
 import TheAbout from '../components/TheAbout.vue'
 import TheClients from '../components/TheClients.vue'
+import TheContact from '../components/TheContact.vue'
 import TheMasthead from '../components/TheMasthead.vue'
 import ThePortfolio from '../components/ThePortfolio .vue'
 import TheServices from '../components/TheServices.vue'
@@ -28,6 +29,7 @@ export default {
         TheAbout,
         TheTeam,
         TheClients,
+        TheContact,
     },
 }
 </script>
